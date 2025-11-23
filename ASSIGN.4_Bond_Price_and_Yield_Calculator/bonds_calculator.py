@@ -1,6 +1,5 @@
 # Simple Bond Price and Yield Calculator
 
-# Calculate bond price
 def bond_price(face, coupon, years, rate):
     total = 0
     for t in range(1, years + 1):
@@ -8,7 +7,6 @@ def bond_price(face, coupon, years, rate):
     total += face / (1 + rate) ** years
     return total
 
-# Estimate yield to maturity (YTM) by trial and error
 def estimate_ytm(face, coupon, years, price):
     rate = 0.05  # Start guess
     for _ in range(100):
